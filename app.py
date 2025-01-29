@@ -1,11 +1,11 @@
 import chainlit as cl
-from langchain_community.llms.ollama import Ollama
+from langchain_ollama import OllamaLLM
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema import StrOutputParser
 from langchain.schema.runnable.config import RunnableConfig
 
 
-model = Ollama(model="deepseek-coder-v2",)
+model = OllamaLLM(model="deepseek-coder-v2",)
 
 @cl.on_chat_start
 async def on_chat_start():
